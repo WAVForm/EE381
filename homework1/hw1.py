@@ -47,25 +47,57 @@ def atleast_two(perms:list[str], target:str):
 def main():
     print("1. Obtain the sample space of an experiment that consists of a fair coin tossed 4 times.")
     permutations = sample_space(["H","T"], 4)
-    print(permutations, "| Length:", len(permutations)) # ['HHHH', 'HHHT', 'HHTH', 'HHTT', 'HTHH', 'HTHT', 'HTTH', 'HTTT', 'THHH', 'THHT', 'THTH', 'THTT', 'TTHH', 'TTHT', 'TTTH', 'TTTT']
+    print(permutations, "| Possibilities:", len(permutations))
+    print()
 
-    print("a) All four results are the same")
-    print(same_results(permutations, 4))# 'HHHH', 'TTTT'
+    print("a) All results are the same")
+    a = same_results(permutations, 4)
+    print(a)
+    print()
     print("b) Exactly one head occurs")
-    print(exactly_one(permutations, "H"))# 'HTTT', 'THTT', 'TTHT', 'TTTH'
+    b = exactly_one(permutations, "H")
+    print(b)
+    print()
     print("c) At least two heads occur")
-    print(atleast_two(permutations, "H"))# 'HHHH', 'HHHT', 'HHTH', 'HHTT', 'HTHH', 'HTHT', 'HTTH', 'THHH', 'THHT', 'THTH', 'TTHH'
+    c = atleast_two(permutations, "H")
+    print(c)
+    print()
     
-    # Calculate P(a), P(b), and P(c)
-        # P(a) = 2/16 
-        # P(b) = 4/16
-        # P(c) = 11/16
-    # Add P(a) + P(b) + P(c) = 17/16
-        # 2/16 + 4/16 + 11/16 = 17/16
+    print("Calculate P(a), P(b), and P(c)")
+    print(f"P(a) = {len(a)}/{len(permutations)}")
+    print(f"P(b) = {len(b)}/{len(permutations)}")
+    print(f"P(c) = {len(c)}/{len(permutations)}")
+    print("Add P(a), P(b), and P(c)")
+    print(f"{len(a)}/{len(permutations)} + {len(b)}/{len(permutations)} + {len(c)}/{len(permutations)} = {len(a)+len(b)+len(c)}/{len(permutations)}")
+    print()
 
     print("2. Obtain the sample space of an experiment that consists of a fair coin tossed 5 times.")
     permutations = sample_space(["H","T"], 5)
-    print(permutations, "| Length:", len(permutations)) #
+    print(permutations, "| Possibilities:", len(permutations))
+    print()
+
+    print("a) All results are the same")
+    a = same_results(permutations, 5)
+    print(a)
+    print()
+    print("b) Exactly one head occurs")
+    b = exactly_one(permutations, "H")
+    print(b)
+    print()
+    print("c) At least two heads occur")
+    c = atleast_two(permutations, "H")
+    print(c)
+    print()
+    
+    print("Calculate P(a), P(b), and P(c)")
+    print(f"P(a) = {len(a)}/{len(permutations)}")
+    print(f"P(b) = {len(b)}/{len(permutations)}")
+    print(f"P(c) = {len(c)}/{len(permutations)}")
+    print("Add P(a), P(b), and P(c)")
+    print(f"{len(a)}/{len(permutations)} + {len(b)}/{len(permutations)} + {len(c)}/{len(permutations)} = {len(a)+len(b)+len(c)}/{len(permutations)}")
+    print()
+
+    
 
 if __name__ == "__main__":
     main()
