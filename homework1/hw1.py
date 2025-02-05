@@ -3,17 +3,6 @@
 # Python Homework 1
 # Section 04
 
-
-# 1. Obtain the sample space of an experiment that consists of a fair coin tossed 4 times. Consider the following events:
-# a) All four results are the same
-# b) Exactly one head occurs
-# c) At least two heads occur
-
-# Calculate P(a), P(b), and P(c)
-# Add P(a) + P(b) + P(c) = 17/16 (?)
-
-# 2. Flipped 5 times (2^5 = 32 possibilities)
-
 def sample_space(possibilities:list[str], times:int):
     '''Returns a list of all permutations of 'possibilities' rolled 'times' amount '''
     perms:list[str] = [""]
